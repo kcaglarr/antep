@@ -35,3 +35,10 @@ Route::get('/export-products', 'ProductController@export')->name('product.export
 Route::get('/show-sliders','SliderController@index')->name('slider.index');
 Route::get('/delete-slider/{id}','SliderController@destroy')
     ->name('delete.slider')->where(array('id' =>'[0-9]+'));
+
+
+/**
+ * Kategori işlemleri
+ */
+Route::get('/upload-categories','CategoryController@upload')->name('category.upload');
+Route::post('/import-categories', 'CategoryController@import')->name('category.import');
